@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Nelli 💖</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      font-family: 'Georgia', cursive;
+      text-align: center; color: #fff;
+      overflow: hidden;
+    }
+    .container { margin-top: 100px; padding: 20px; }
+    h1 { font-size: 3em; margin-bottom: 30px; }
+    .frase { font-size: 1.5em; max-width: 600px; margin: 0 auto 40px;
+             animation: fadeIn 3s ease-in-out; }
+    .corazones { font-size: 3em; animation: latido 1s infinite; }
+    @keyframes latido {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para ti, Nelli 💌</h1>
+    <p class="frase" id="fraseActual"></p>
+    <div class="corazones">
+      <span>❤️</span><span>💖</span><span>💕</span>
+    </div>
+  </div>
+  <script>
+    const frases = [
+      "Desde que llegaste, mi mundo tiene más luz.",
+      "Tú eres el verso más bonito de mi vida.",
+      "Si quererte es un sueño, nunca quiero despertar.",
+      "Tu sonrisa es mi canción favorita.",
+      "Eres mi lugar seguro, mi paz.",
+      "Cada día contigo es un poema que quiero volver a leer.",
+      "No sé cómo lo haces, pero te quiero más cada día."
+    ];
+    const e = document.getElementById("fraseActual");
+    e.textContent = frases[Math.floor(Math.random() * frases.length)];
+  </script>
+</body>
+</html>
